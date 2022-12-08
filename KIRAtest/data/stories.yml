@@ -1,0 +1,335 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+
+- story: course_details path
+  steps:
+  - intent: course_details
+  - action: utter_course_details
+  - action: utter_further_info
+  - intent: affirm
+  - action: course_join_form
+  - active_loop: course_join_form
+
+- story: course_details path 2
+  steps:
+  - intent: course_details
+  - action: utter_course_details
+  - action: utter_further_info
+  - intent: deny
+  - action: utter_continue
+
+- story: course_price path
+  steps:
+  - intent: course_price
+  - action: utter_course_price
+  - action: utter_further_info
+  - intent: affirm
+  - action: course_join_form
+  - active_loop: course_join_form
+
+- story: course_price path 2
+  steps:
+  - intent: course_price
+  - action: utter_course_price
+  - action: utter_further_info
+  - intent: deny
+  - action: utter_continue
+
+
+
+# - story: course_details path
+#   steps:
+#   - intent: course_details
+#   - action: action_course_details
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: course_details path 2
+#   steps:
+#   - intent: course_details
+#   - action: action_course_details
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_unhappy
+#   - intent: affirm
+#   - action: call_back_form
+#   - active_loop: call_back_form
+
+# - story: course_details path 3
+#   steps:
+#   - intent: course_details
+#   - action: action_course_details
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_unhappy
+#   - intent: deny
+#   - action: utter_continue
+
+# - story: course_price path
+#   steps:
+#   - intent: course_price
+#   - action: action_course_price
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+
+# - story: course_price path 2
+#   steps:
+#   - intent: course_price
+#   - action: action_course_price
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_unhappy
+#   - intent: affirm
+#   - action: call_back_form
+#   - active_loop: call_back_form
+
+# - story: course_price path 3
+#   steps:
+#   - intent: course_price
+#   - action: action_course_price
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_unhappy
+#   - intent: deny
+#   - action: utter_continue
+
+# - story: course_notification path
+#   steps:
+#   - intent: course_notification
+#   - action: utter_course_notification
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: course_notification path 2
+#   steps:
+#   - intent: course_notification
+#   - action: utter_course_notification
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_unhappy
+#   - intent: affirm
+#   - action: call_back_form
+#   - active_loop: call_back_form
+
+# - story: course_notification path 3
+#   steps:
+#   - intent: course_notification
+#   - action: utter_course_notification
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_unhappy
+#   - intent: deny
+#   - action: utter_continue
+
+
+- story: internship_opportunities path
+  steps:
+  - intent: internship_opportunities
+  - action: utter_internship_opportunities
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: internship_opportunities path 2
+  steps:
+  - intent: internship_opportunities
+  - action: utter_internship_opportunities
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: affirm
+  - action: call_back_form
+  - active_loop: call_back_form
+
+- story: internship_opportunities path 3
+  steps:
+  - intent: internship_opportunities
+  - action: utter_internship_opportunities
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: deny
+  - action: utter_continue
+
+- story: resources path
+  steps:
+  - intent: resources
+  - action: utter_resources
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+
+- story: resources path 2
+  steps:
+  - intent: resources
+  - action: utter_resources
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: affirm
+  - action: call_back_form
+  - active_loop: call_back_form
+
+- story: resources path 3
+  steps:
+  - intent: resources
+  - action: utter_resources
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: deny
+  - action: utter_continue
+
+
+- story: complaints path
+  steps:
+  - intent: complaints
+  - action: utter_complaints
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+
+- story: complaints path 2
+  steps:
+  - intent: complaints
+  - action: utter_complaints
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: affirm
+  - action: call_back_form
+  - active_loop: call_back_form
+
+
+- story: complaints path 3
+  steps:
+  - intent: complaints
+  - action: utter_complaints
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: deny
+  - action: utter_continue
+
+- story: projects path
+  steps:
+  - intent: projects
+  - action: utter_projects
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: projects path 2
+  steps:
+  - intent: projects
+  - action: utter_projects
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: affirm
+  - action: call_back_form
+  - active_loop: call_back_form
+
+- story: projects path 3
+  steps:
+  - intent: projects
+  - action: utter_projects
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: deny
+  - action: utter_continue
+
+- story: refund_payment path
+  steps:
+  - intent: refund_payment
+  - action: utter_refund_payment
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+
+- story: refund_payment path 2
+  steps:
+  - intent: refund_payment
+  - action: utter_refund_payment
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: affirm
+  - action: call_back_form
+  - active_loop: call_back_form
+
+- story: refund_payment path 3
+  steps:
+  - intent: refund_payment
+  - action: utter_refund_payment
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: deny
+  - action: utter_continue
+
+
+- story: ineuron path
+  steps:
+  - intent: ineuron
+  - action: utter_ineuron
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: ineuron path 2
+  steps:
+  - intent: ineuron
+  - action: utter_ineuron
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: affirm
+  - action: call_back_form
+  - active_loop: call_back_form
+
+
+- story: ineuron path 3
+  steps:
+  - intent: ineuron
+  - action: utter_ineuron
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_unhappy
+  - intent: deny
+  - action: utter_continue
+
+- story: Fallback path
+  steps:
+  - intent: nlu_fallback
+  - action: utter_not_resolved
+  - intent: deny
+  - action: utter_continue
+
+- story: connections path
+  steps:
+  - intent: connections
+  - action: utter_connections
+
+
+
+
+
+

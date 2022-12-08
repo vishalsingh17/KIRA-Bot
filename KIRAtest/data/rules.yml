@@ -1,0 +1,65 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Fallback rule
+  steps:
+  - intent: nlu_fallback
+  - action: utter_not_resolved
+
+- rule: Activate call back form
+  steps:
+  - action: utter_not_resolved
+  - intent: affirm
+  - action: call_back_form
+  - active_loop: call_back_form
+
+- rule: Activate call back form 2
+  steps:
+  - action: call_back_form
+  - active_loop: call_back_form
+
+- rule: Submit call back form
+  condition:
+  - active_loop: call_back_form
+  steps:
+  - action: call_back_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit_callback
+  - action: action_reset_all_slots
+
+- rule: Activate join_courses path
+  steps:
+  - intent: join_courses
+  - action: utter_join_courses
+  - action: course_join_form
+  - active_loop: course_join_form
+
+- rule: Activate join_courses path 2
+  steps:
+  - action: course_join_form
+  - active_loop: course_join_form
+
+- rule: Submit join_courses form
+  condition:
+  - active_loop: course_join_form
+  steps:
+  - action: course_join_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit_callback
+  - action: action_reset_all_slots
+

@@ -1,0 +1,115 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- affirm
+- bot_challenge
+- complaints
+- connections
+- course_details
+- course_price
+- deny
+- goodbye
+- greet
+- ineuron
+- internship_opportunities
+- join_courses
+- mood_great
+- mood_unhappy
+- nlu_fallback
+- projects
+- refund_payment
+- resources
+entities:
+- course
+slots:
+  course:
+    type: text
+    influence_conversation: true
+  name:
+    type: text
+    influence_conversation: true
+  number:
+    type: text
+    influence_conversation: true
+  email:
+    type: text
+    influence_conversation: true
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! I am KIRA bot, How can I help you?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_unhappy:
+  - text: Sorry to hear that. Would you like to call back?
+  utter_continue:
+  - text: Feel free to ask other queries
+  utter_goodbye:
+  - text: Bye
+  utter_course_details:
+  - text: We have wide range of courses available like Full stack Data Science, Full Stack Data Analytics, Full Stack JavaScript, Cyber Security Masters and many more...
+  utter_course_price:
+  - text: Please visit official website for course price details
+  utter_course_notification:
+  - text: You will be notified through mail, as soon as course goes live. So please be patient.
+  utter_resources:
+  - text: For all the resources of the course, please visit course section of iNeuron student portal
+  utter_internship_opportunities:
+  - text: As you progress with the course, we provide ample opportunities for internships as well as placements.
+  utter_complaints:
+  - text: We are sorry to hear that. Please write to us at support@ineuron.com. Our team will reach out to you.
+  utter_projects:
+  - text: You can find all assignments or projects in course section. If you stuck in assignments or projects, please go throught the lectures again. If still stuck or have any other doubts, please connect to us at mail.
+  utter_refund_payment:
+  - text: For all Payment or refund related queries, please visit our payments page.
+  utter_iamabot:
+  - text: I am KIRA Bot. I help technology enthusiasts reach right destination.
+  utter_ineuron:
+  - text: iNeuron offers affordable online courses, job guarantee programs, placement assistance, a revolutionary self-paced internship portal and an unparalleled job portal.
+  utter_not_resolved:
+  - text: We are currently unable to respond to your query. Would you like to call back?
+  utter_ask_name:
+  - text: Please enter your name
+  utter_ask_number:
+  - text: Please enter your mobile number
+  utter_ask_email:
+  - text: Please enter your email ID
+  utter_ask_course:
+  - text: Please enter the course you want to enrolled in.
+  utter_submit_callback:
+  - text: Thank you for providing your details. Our Support Personnel will call you back shortly.
+  utter_further_info:
+  - text: Would you like a call back to know more about this? (Yes / No)
+  utter_connections:
+  - text: Please connect them over Linkedin and you can also join datascience communities in discord.
+  utter_join_courses:
+  - text: Please fill out the form to know more about the course
+actions:
+- action_course_details
+- action_course_price
+- action_reset_all_slots
+forms:
+  call_back_form:
+    required_slots:
+      name:
+      - type: from_text
+      number:
+      - type: from_text
+      email:
+      - type: from_text
+  course_join_form:
+    required_slots:
+      name:
+      - type: from_text
+      number:
+      - type: from_text
+      email:
+      - type: from_text
+      course:
+      - type: from_text

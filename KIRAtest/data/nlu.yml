@@ -1,0 +1,407 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - Who are you ?
+    - What is your name?
+    - Do you have any name?
+    - Tell me about you.
+    - I want to know about you
+
+- intent: course_details
+  examples: |
+   - Courses
+   - Courses available
+   - Courses available in iNeuron
+   - Can I get details on course?
+   - May I know about courses offered in iNeuron?
+   - How do I know what the course is about?
+   - What is Full Stack [Data Analytics](course) course about?
+   - content of Full Stack [Data Science](course) bootcamp
+   - May I know about the Enterprise [Java](course) with springboot course ?
+   - About [Cyber Security](course) Masters course
+   - About Full Stack [Javascript](course) Web Developer course
+   - [Java](course) course details 
+   - [data science](course) course details 
+   - [data analytics](course) course details
+   - [data analytics](course)
+   - [Java](course)
+   - Full Stack [Data Science](course) course
+   - Do you have Machine Learning course?
+   - Do you have [Cyber Security](course) course?
+
+
+- intent: course_price
+  examples: |
+   - How do I know the price of courses?
+   - Course cost
+   - Full Stack [Data Analytics](course) course price
+   - cost of Full Stack [Data Science](course) bootcamp
+   - May I know the price of [Java](course) with springboot course ?
+   - price of [Cyber Security](course) Masters course
+   - price of Full Stack [Javascript](course) Web Developer course
+   - [Java](course) course price
+   - [data science](course) course price
+   - [data analytics](course) course price
+   - Full Stack [Data Science](course) course cost
+
+# - intent: course_notification
+#   examples: |
+ 
+
+- intent: ineuron
+  examples: |
+   - What is ineuron?
+   - Tell me about iNeuron
+   - About ineuron
+   - What do you do in ineuron?
+   - iNeuron
+   - May I know about iNeuron?
+
+- intent: internship_opportunities
+  examples: |
+   - internship opportunities
+   - job opportunities
+   - Can I get any internship or job here?
+   - Can I get any internship or job here if I complete the course?
+   - Where to apply for internship?
+   - Where can I apply for a job?
+   - Please provide some internship
+   - May I know if there are any job openings?
+   - What internships or jobs available?
+   - Portal to apply for internship
+   - what jobs and placements do you offer ?
+   - placements
+   - jobs available
+   - internships
+   - industry exposure
+
+
+- intent: resources
+  examples: |
+    - give me resources please??
+    - where can I find research papers
+    - where can I find video links
+    - can someone give me documentations
+    - anybody provide me link ?
+    - can someone help me find this?
+    - please help to find me this research paper?
+    - book link please?
+    - assignment link please?
+    - where is this book available?
+    - book availability in this store?
+    - where can I find the book pdf?
+    - where can I find the pdf of it?
+    - where to find the resources of this
+    - hello please give me resources?
+    - hi where is this book?
+    - hi where is the video link for this thing?
+    - please give me the following resources
+    - can I get links to Andrew ng video
+    - can I get link on the krish Naik new video
+    - where is krish Naik new video 
+    - resources?
+    - any book for this particular topic ?
+    - please give some simple explanation on this topic
+    - is there any basic article available on this?
+    - please give me advanced theory of this topic
+    - give me data of this topic
+    - I want help to get machine learning book
+    - where can I buy krish Naik books
+    - find me krish Naik videos
+    - find me machine learning books
+    - find me some of the new concepts of nlp
+    - how to master machine learning in 7 days
+    - how to become data scientist in a month
+    - where can I get computer vision courses?
+    - give me nlp links
+    - give me more news on ai
+    - give me basic resources of python
+    - give me python resources for learning
+    - I want to learn python where to start
+    - how to start data science journey
+    - I want to learn more about data please give info
+    - is there any info on neural networks
+    - give me articles on neural netoworks
+    - articles for becoming a good data engineer
+    - articles on how much data scientist earn 
+    - please give me more articles
+    - how to find the specifics of this subject
+
+- intent: complaints
+  examples: |
+    - I have a complaint about the class teacher
+    - the teacher is bad
+    - teach me please
+    - forget password not working
+    - dashboard is not working, please respond
+    - please respond where are you guys?!
+    - not satisfied with this
+    - not helping 
+    - course was not helpful
+    - not informative, please respond
+    - course was not satisfactory
+    - course was not satisfied, 0/10 rating
+    - did not teach enough!! Fraud. 
+    - get me a good teacher, this one does not explain well
+    - I am not able to understandable
+    - this is wrong, you should improve
+    - login error on dashboard, what to do?
+    - error with your website 
+    - website error again and again
+    - how you will handle my errors when you cannot solve this simple query
+    - you cannot solve this one?
+    - respond to me asap
+    - where are you guys! No one responding
+    - not happy with the current articles
+    - waste of money
+    - your dashboard needs improvement
+    - you should handle your customers appropriately 
+    - your teachers are inexperienced
+    - you have hired fools
+    - you do not match the industry standards
+    - your courses are not worth it
+    - your courses are naive
+    - your courses are not informative and boring
+    - krish Naik does not come to explain me
+    - i did not understand a single word you said
+    - you guys are losers
+    - why should I buy your course when it is bad  
+    - I will use foul language on you
+    - I will go in court  
+    - I will sue you guys
+    - give me my money back or I will put case on u
+    - u guys are fraud, take money from me
+    - why you take money
+    - why you do not give free coaching for students
+    
+
+- intent: projects
+  examples: |
+    - what all projects?
+    - where to avail projects?
+    - where to get certification?
+    - how do I get to do a project? 
+    - can I do project in ml
+    - object detection project video link
+    - project walkthrough for nlp
+    - what are the hands on projects available on your portal
+    - how to solve this coding question?
+    - sql not solving please help
+    - getting this error, can't do a thing
+    - I am a beginner please tell me a coding project
+    - I am a pro, please tell me a machine learning project
+    - what projects I should do in machine learning
+    - suggest me some good project work in javascript
+    - could you please help me with my assignment
+    - how to download assignment
+    - where assignment
+    - Where is assignment
+    - why this assignment
+    - where to submit this assignment
+    - Will krish Naik solve me this assignment
+    - krish help me in this assignment
+    - sir please help me na 
+    - sir can you give me assignment
+    - need help with this assignment
+    - how to code in python
+    - how to code in java
+    - what ide to use for python
+    - where to submit my assignment?
+    - can I submit late assignment?
+    - can someone explain the maths behind this?
+    - can someone get me an explanation of this topic?
+    
+- intent: refund_payment
+  examples: |
+    - I want a refund
+    - How to apply for refund
+    - not received my refund
+    - where is my money 
+    - cancel my subscription
+    - give me my money back please 
+    - I want to cancel my subscription plan
+    - my payment not done please help
+    - payment portal not opening 
+    - payment done but course not allowed
+    - how to get payment details 
+    - please give me my payment bill
+    - I have not received the payment bill on my mail
+    - can you please send me my bill
+    - bill please 
+    - payment failing again and again
+    - payment done
+    - payment receipt please
+    - receipt for refund not given
+    - who to contact for payment details
+    - payment dashboard is out of service
+    - refund on previous coursework 
+    - cancel my subscription on current plans
+    - refund and cancel my plan
+    - refund my excess amount deducted
+    - extra amount deducted from my account
+    - I paid 2000 rs yesterday, but he said payment felt
+    - any profitable plans for new customers?
+    - any discounts or coupons I can have?
+    - is there any discount on this course?
+    - coupon code shared but not getting the money
+    - where to get the payment details on this courses
+    - how to cancel my plan for the upcoming month
+    - payment not showing on dashboard
+    - please provide some help for payment portal
+    - please give me some help for setting up the account
+
+- intent: join_courses
+  examples: |
+    - I want to join your course
+    - Enroll in course
+    - Joining course
+    - instructions for joining your course
+    - how can I join your course?
+    - how to join your ml course?
+    - how to join krish Naik course?
+    - I want to join ml course by krish Naik, please help!!!
+    - I really want to join Hitesh's course, can you help?
+    - what is the joining date of the course?
+    - what is the timeline of the coursework?
+    - I am not able to join the course
+    - payment done, not able to join the course, please help
+    - can someone suggest any link for joining course
+    - want to join free course
+    - joining course date
+    - date of joining where it is
+    - next course starting from which date
+    - what is the time duration of this course
+    - I want to join the data science course, give me suggestions
+    - How do I know when the course will be in live?
+    - Can I get mail when the course starts?
+    - How do I get to know when the course will be in live?
+    - When the course will be live?
+    - Please notify me when classes start
+    - When do the course classes start?
+    - when is the ml course of krish Naik starting
+ 
+
+- intent: connections
+  examples: |
+    - I want to meet krish Naik
+    - where to get connected with ml folks
+    - where is the aim community
+    - want to join the aiml community 
+    - where is the Facebook page of ineuron
+    - twitter of ineuron
+    - is ineuron active on Instagram
+    - krish Naik meet me pls
+    - how can we connect with ml experts
+    - where is community of ai
+    - how to connect with ai people
+    - where are ai folks
+    - how intelligent are ml folks
+    - I want to meet ai-ml people
+    - I want to talk to krish Naik
+    - I want to complain to krish Naik
+    - I want to thank krish Naik
+    - I am willing to collaborate with people
+    - want to collaborate
+    - where to collaborate
+    - finding collaboration
+    - I want to work with ml team
+    - I want to connect with awesome ml experts!!
+    - want to connect krish Naik on social media
+    - krish Naik Facebook
+    - krish naik phone number
+    - where to connect to ineuron on social media?
+
+# - intent: no_mails
+#   examples: |
+#    - I am not getting mails
+#    - I am not getting any course related mails
+#    - Why I am not getting any course related mails?
